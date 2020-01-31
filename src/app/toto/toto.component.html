@@ -1,0 +1,10 @@
+
+<input type="text" style="width: 100%" placeholder="Enter" [(ngModel)]="todoTitle" (keyup.enter)="addTodo(todoTitle)">
+
+<div class="Todo" *ngFor="let todo of todos" >
+    <div class="bbn">{{todo.title}}</div>
+    <!--<input type="text" [(ngModel)]="todo.title">-->
+    <div style="position: absolute; right: 0;" class="bbn">
+    <input type="button" style="border: none;color: red;background-color: blanchedalmond;" (click)="deleteTodo(todo.id)" value="remove">
+	</div>
+</div>
